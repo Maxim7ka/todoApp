@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Gabarito;
+    background-color: #E6D1B5;
+    min-height: 100vh;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+#root {
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 35%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.tasks-window {
+    margin-top: 50px;
+    min-width: 100%;
+    min-height: 400px;
+    /* max-height: 600px; */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks-heading {
+    flex: 0 0 50px;
+    min-width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #aca191;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.svgIco {
+    height: 30px;
+    width: 30px;
+}
+
+.no-tasks {
+    text-align: center;
+}
+
+.task-input {
+    background-color: transparent;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #5E686F;
+    color: #f3e6d6;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.task-input:focus {
+    outline: none;
+    border-bottom: solid 2px #778794;
+}
+
+.tasks-list {
+    flex: 1 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.tasks-item {
+    display: flex;
+    min-height: 30px;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.complete-tick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 0px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.complete-tick img {
+    width: 25px;
+    height: 25px;
+}
+
+.delete-task {
+    margin: 0px 0px 0px auto;
+}
