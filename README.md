@@ -1,6 +1,6 @@
 # My Todo app
 
-This is my first app based on React
+This is my first app based on React, using the Vite bundler.
 
 To get started type yarn in terminal, to install all dependencies. 
 Then type yarn dev to run project in the development mode.
