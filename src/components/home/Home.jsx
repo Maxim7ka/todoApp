@@ -23,6 +23,15 @@ function App() {
     localStorage.setItem("todo-tasks", JSON.stringify(tasksList));
   }, [tasksList]);
 
+  function findNumberOfUnfinishedTasks(allTasksList) {
+    let number = 0;
+    allTasksList.forEach(e => {
+      if (e.isCompleted !== true) number += 1;
+    });
+
+    return number;
+  }
+
   function toggleTask(id) {
     const copy = [...tasksList];
     const current = copy.find(task => task.id === id);
@@ -48,7 +57,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Today I have {tasksList.length ? tasksList.length : 'no'} tasks</h1>
+      <h1>I have {tasksList.length ? findNumberOfUnfinishedTasks(tasksList) : 'no'} tasks to do</h1>
       <div className="tasks-window">
         <TasksHeading setTasksList={setTasksList} />
         <div className="tasks-list">
